@@ -4,17 +4,40 @@ import HomeView from '../views/HomeView.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomeView',
     component: HomeView
   },
   {
     path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    name: 'AboutView',
+    component: () => import('../views/AboutView.vue')
+  },
+  {
+    path: '/login',
+    name: 'LoginPage',
+    component: () => import('../views/LoginPage.vue')
+  },
+  {
+    path: '/register',
+    name: 'RegisterPage',
+    component: () => import('../views/RegisterPage.vue')
+  },
+  {
+    path: '/add',
+    name: 'AddShoes',
+    component: () => import('../views/AddShoes.vue')
+  },
+  {
+    path: '/:id',
+    name: 'EditShoes',
+    component: () => import('../views/EditShoes.vue')
+  },
+  {
+    path: '/admin',
+    name: 'AdminView',
+    component: () => import('../views/AdminView.vue')
   }
+    
 ]
 
 const router = createRouter({

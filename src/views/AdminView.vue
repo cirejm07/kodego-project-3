@@ -1,16 +1,24 @@
 <template>
-  <h1>LuzViMinda</h1>
+  <h1>Admin Page</h1>
   <div class="d-flex">
     <div v-for="shoe in shoes" :key="shoe.id" class="home">
-  <div class="card" style="width: 18rem; height: 20rem;">
+  <div class="card" style="width: 18rem; height: 35rem;">
   <img :src="shoe.imageUrl" class="card-img-top" :alt="shoe.imgUrl">
   <div class="card-body">
+    <p>id - {{shoe.id}}</p>
     <h5 class="card-title">Name - {{shoe.name}}</h5>
     <p>Price - {{shoe.price}}</p>
+    <p class="card-text">Description - {{shoe.description}}</p>
     <p>Category: {{shoe.category}}</p>
     <p>Gender - {{shoe.gender}}</p>
+    <div class="d-flex justify-content-end">
+      <router-link class="btn btn-primary h-25 me-1" :to="{path:`/${shoe.id}`}">Edit</router-link>
+     <p @click="deleteHandler(shoe.id)" class="btn btn-danger">Delete</p>
+    </div>
   </div>
 </div>
+    <br>
+    
   </div>
   </div>
 </template>
@@ -21,7 +29,7 @@ import { auth, shoesCollectionRef } from '@/firebase'
 import { onBeforeMount, onMounted } from '@vue/runtime-core'
 import { deleteDoc, doc, onSnapshot } from '@firebase/firestore'
 export default {
-    name: 'HomeView',
+    name: 'AdminView',
     setup() {
       const name = ref('')
     const shoes = ref([])

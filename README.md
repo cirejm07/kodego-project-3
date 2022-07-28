@@ -1,4 +1,4 @@
-# auth-example
+# kodego-project-3
 
 ## Project setup
 ```
