@@ -1,5 +1,6 @@
 <template>
-  <h1>Register</h1>
+  <div>
+    <h1>Register</h1>
     <form @submit.prevent="registerHandler">
     <div v-if="error">{{ error }}</div>
     <input v-model="email" type="email" placeholder="Enter email">
@@ -8,6 +9,7 @@
     click here...</router-link></div>
     <input type="submit" value="Register">
     </form>
+  </div>
 </template>
 
 <script>

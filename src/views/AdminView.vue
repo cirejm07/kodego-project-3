@@ -1,5 +1,6 @@
 <template>
-  <h1>Admin Page</h1>
+  <div>
+    <h1>Admin Page</h1>
   <div class="d-flex">
     <div v-for="shoe in shoes" :key="shoe.id" class="home">
   <div class="card" style="width: 18rem; height: 35rem;">
@@ -19,6 +20,7 @@
 </div>
     <br>
     
+  </div>
   </div>
   </div>
 </template>

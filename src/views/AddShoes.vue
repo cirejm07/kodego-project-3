@@ -1,5 +1,6 @@
 <template>
-  <h2>Add Shoe</h2>
+  <div>
+    <h2>Add Shoe</h2>
   <form @submit.prevent="addHandler"  class="container">
     <div class="mb-3">
     <div><img :src="imageUrl" alt=""></div>
@@ -51,6 +52,7 @@
   <p>category - {{category}}</p>
   <p> gender - {{gender}}</p>
 </div> -->
+  </div>
 </template>
 
 <script>

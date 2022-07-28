@@ -1,5 +1,6 @@
 <template>
-  <h1>LuzViMinda</h1>
+  <div>
+    <h1>LuzViMinda</h1>
   <div class="d-flex">
     <div v-for="shoe in shoes" :key="shoe.id" class="home">
   <div class="card" style="width: 18rem; height: 20rem;">
@@ -11,6 +12,7 @@
     <p>Gender - {{shoe.gender}}</p>
   </div>
 </div>
+  </div>
   </div>
   </div>
 </template>

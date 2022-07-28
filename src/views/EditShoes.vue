@@ -1,5 +1,6 @@
 <template>
-  <h2>Edit Shoe</h2>
+  <div>
+    <h2>Edit Shoe</h2>
   <form @submit.prevent="updateHandler" class="container">
     <div class="mb-3">
     <img :src="imageUrl" :alt="name">
@@ -42,6 +43,7 @@
 
   <button type="submit" class="btn btn-primary">Add Shoe</button>
 </form>
+  </div>
 </template>
 
 <script>
