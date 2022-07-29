@@ -14,7 +14,7 @@
     <p>Gender - {{shoe.gender}}</p>
     <div class="d-flex justify-content-end">
       <router-link class="btn btn-primary h-25 me-1" :to="{path:`/edit/${shoe.id}`}">Edit</router-link>
-     <p @click="deleteHandler(shoe.id)" class="btn btn-danger">Delete</p>
+     <p @click.prevent="deleteHandler(shoe.id)" class="btn btn-danger">Delete</p>
     </div>
   </div>
 </div>
@@ -64,20 +64,64 @@ export default {
     })
     })
     
-    const deleteHandler = async (shoeId)  => {
-        
-        try{
-          let shoeRef = doc(shoesCollectionRef, shoeId)
-        await deleteDoc(shoeRef)
-        alert('shoe deleted')
-        }
-        catch(error){
-          console.log(error)
-        }
-    }
+    
     
 
-    return { name, shoes, deleteHandler }
+    return { name, shoes }
+    },
+    methods: {
+        async deleteHandler (shoeId) {
+         
+        try{
+          
+        
+       this.$swal({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
+await this.$swal({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonText: 'Yes, delete it!',
+  cancelButtonText: 'No, cancel!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    let shoeRef = doc(shoesCollectionRef, shoeId)
+     deleteDoc(shoeRef)
+    .then(() => {
+      this.$swal(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+    })
+    
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === this.DismissReason.cancel
+  ) {
+    this.$swal(
+      'Cancelled',
+      'Your imaginary file is safe :)',
+      'error'
+    )
+  }
+})
+        
+}
+  catch(error){
+          console.log(error)
+        }
+      }
+
+      
     }
 }
 </script>

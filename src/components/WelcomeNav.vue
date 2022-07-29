@@ -58,7 +58,7 @@ nav{
 }
   img {
     width: 100px;
-    height: 40px;
+    height: 50px;
   }
 
   .dropstart .dropdown-toggle-split::before {
