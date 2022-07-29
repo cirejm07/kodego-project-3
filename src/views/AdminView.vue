@@ -13,7 +13,7 @@
     <p>Category: {{shoe.category}}</p>
     <p>Gender - {{shoe.gender}}</p>
     <div class="d-flex justify-content-end">
-      <router-link class="btn btn-primary h-25 me-1" :to="{path:`/${shoe.id}`}">Edit</router-link>
+      <router-link class="btn btn-primary h-25 me-1" :to="{path:`/edit/${shoe.id}`}">Edit</router-link>
      <p @click="deleteHandler(shoe.id)" class="btn btn-danger">Delete</p>
     </div>
   </div>

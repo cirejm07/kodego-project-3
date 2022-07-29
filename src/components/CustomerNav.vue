@@ -1,14 +1,8 @@
 <template>
-  <div class="nav">
-      <div class="left-nav">
-        <router-link to="/">Home</router-link> |
-    <router-link to="/">Products</router-link> |
-    <router-link to="/about">About us</router-link> |
-    </div> 
-    <div class="right-nav">
-        <span>Welcome {{user}}</span> |
-    <button @click="signoutHandler">Signout</button>
-    </div>
+  <div class="text-center mt-1">
+        <router-link to="/men">Men</router-link> |
+    <router-link to="/women">Women</router-link> |
+    <router-link to="/unisex">Unisex</router-link>
   </div>
 </template>
 
@@ -19,22 +13,18 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 a {
-    font-weight: bold;
-  color: #2c3e50;
+  font-weight: bold;
+  color: #2c3e50 ;
   text-decoration: none;
 }
 
-.nav {
-    display: flex;
-    padding: 30px;
+a:hover{
+  color: #42b983 !important;
 }
 
-.left-nav {
-    margin-right: auto;
-}
 
 a.router-link-exact-active {
   color: #42b983;

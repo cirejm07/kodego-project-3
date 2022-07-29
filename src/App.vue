@@ -1,11 +1,9 @@
 <template>
+  <WelcomeNav :title="getId === '7W29HGeCdfPpqASfWeHlZkOY9t63' ? 'Admin' : 'Hi'" :user="userName" :signoutHandler="signoutHandler" />
   <div v-if="isShow && getId === '7W29HGeCdfPpqASfWeHlZkOY9t63'">
    <AdminNav :user="userName" :signoutHandler="signoutHandler" />
   </div>
-  <div v-else-if=" !getId">
-   <NavBar />
-  </div>
-  <div v-else-if="isShow && getId !== '7W29HGeCdfPpqASfWeHlZkOY9t63'">
+  <div v-else-if="getId !== '7W29HGeCdfPpqASfWeHlZkOY9t63'">
     <CustomerNavVue :user="userName" :signoutHandler="signoutHandler" />
   </div>
   <router-view/>
@@ -17,16 +15,16 @@ import {  useRoute, useRouter } from 'vue-router'
 import { auth } from '@/firebase'
 import { onAuthStateChanged, signOut } from '@firebase/auth'
 import { onBeforeMount, ref } from 'vue'
-import NavBar from './components/NavBar.vue'
 import AdminNav from './components/AdminNav.vue'
 import CustomerNavVue from './components/CustomerNav.vue'
+import WelcomeNav from './components/WelcomeNav.vue'
 
 
 
 
 export default {
   name: 'App',
-  components: { NavBar, AdminNav, CustomerNavVue },
+  components: { AdminNav, CustomerNavVue, WelcomeNav },
   setup(){
 
     const userName = ref('')
@@ -83,12 +81,14 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;1,600&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-size: 14px !important;
 }
 
 nav {

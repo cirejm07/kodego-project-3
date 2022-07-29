@@ -27,8 +27,14 @@ const routes = [
     name: 'AddShoes',
     component: () => import('../views/AddShoes.vue')
   },
+  
   {
-    path: '/:id',
+    name:"NotFound",
+    path:"/:pathMatch(.*)*",
+    component: () => import('../views/NotFound.vue')
+},
+  {
+    path: '/edit/:id',
     name: 'EditShoes',
     component: () => import('../views/EditShoes.vue')
   },
