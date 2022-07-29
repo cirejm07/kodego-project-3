@@ -115,7 +115,7 @@ export default {
       gender: gender.value
     })
     alert(`Shoe ID: ${cityId.value} has been updated`)
-    router.push('/')
+    router.push('/admin')
    }
    catch(err){
     console.log(err.message)

@@ -7,6 +7,7 @@
     <CustomerNavVue :user="userName" :signoutHandler="signoutHandler" />
   </div>
   <router-view/>
+  <FooterView />
 </template>
 
 <script>
@@ -18,13 +19,14 @@ import { onBeforeMount, ref } from 'vue'
 import AdminNav from './components/AdminNav.vue'
 import CustomerNavVue from './components/CustomerNav.vue'
 import WelcomeNav from './components/WelcomeNav.vue'
+import FooterView from './components/FooterView.vue'
 
 
 
 
 export default {
   name: 'App',
-  components: { AdminNav, CustomerNavVue, WelcomeNav },
+  components: { AdminNav, CustomerNavVue, WelcomeNav, FooterView },
   setup(){
 
     const userName = ref('')
@@ -33,6 +35,7 @@ export default {
     const getId = ref(null)
     const route = useRoute()
     
+
    onBeforeMount(() => {
     onAuthStateChanged(auth, (user) => {
       if(!user){
@@ -64,17 +67,30 @@ export default {
     })
    })
 
-  const signoutHandler = () => {
+  
+
+   return { isShow,userName, getId }
+  },
+  methods: {
+    
+signoutHandler () {
+  const router = useRouter()
       signOut(auth)
       .then(() => {
-        alert('user logged out')
-        window.location.reload()
+        this.$swal({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Logged out successfully',
+        showConfirmButton: false,
+        timer: 1500
+      })
+        setTimeout(() => {
+          window.location.reload()
+        },1500)
         router.replace('/login')
       })
       .catch(err => console.log(err.message))
     }
-
-   return { isShow,userName, signoutHandler, getId }
   }
 }
 
@@ -89,6 +105,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   font-size: 14px !important;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.footer {
+  background: #000;
+  margin-top: auto;
+  color: #fff;
 }
 
 nav {

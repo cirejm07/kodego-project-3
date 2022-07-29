@@ -1,9 +1,10 @@
 <template>
+
   <div class="log-in">
     <div>
       <img src="@/assets/brand-logo.png" alt="">
     </div>
-  <form @submit.prevent="loginHandler" class="mt-5">
+  <form @submit.prevent="loginHandler" class="mt-2">
   <p v-if="error === 'User disabled'" class="text-danger my-2">{{error}}</p>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label w-100 text-start">Email address</label>
@@ -33,9 +34,12 @@
 </template>
 
 <script>
+
 import { ref } from '@vue/reactivity'
 import { auth } from '@/firebase'
 import { signInWithEmailAndPassword } from '@firebase/auth'
+
+
 
 
 
@@ -91,7 +95,10 @@ export default {
 
       
 
-       return {checking, checkValue , email, password, isCheck, loginHandler , error }
+       return { checking, checkValue , email, password, isCheck, loginHandler , error }
+  },
+  methods: {
+     
   }
 }
 </script>
@@ -143,7 +150,7 @@ form{
 }
   
   img{
-    width: 280px;
+    width: 350px;
     height: auto;
   }
 
