@@ -10,7 +10,7 @@
         </div>
         <div class="mb-3 col">
           <label for="description" class="form-label">Description</label>
-          <textarea  v-model="description" name="" id="description" cols="49" rows="3" placeholder="Describe the product"></textarea>
+          <textarea  v-model="description" name="" id="description" cols="50" rows="3" placeholder="Describe the product"></textarea>
         </div>
         <div class="row justify-content-center">
         <div class="mb-3 col-6">
