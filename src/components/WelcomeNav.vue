@@ -55,7 +55,7 @@ nav{
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-}
+} 
   img {
     width: 100px;
     height: 50px;

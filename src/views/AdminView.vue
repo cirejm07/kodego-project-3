@@ -1,6 +1,10 @@
 <template>
   <div>
     <h1>Admin Page</h1>
+  <div class="d-md-flex gap-md-1">
+    <div v-for="shoe in shoes" :key="shoe.id" class="home">
+  <div class="card" style="width: 18rem; height: 35rem;">
+  <img :src="shoe.imageUrl" class="card-img-top border border-1" :alt="shoe.imgUrl">
   <div class="d-flex justify-content-center">
     <div v-for="shoe in shoes" :key="shoe.id" class="home">
   <div class="card mx-2" style="width: 18rem; height: auto">
@@ -20,6 +24,9 @@
 </div>
     <br>
     
+  </div>
+  </div>
+  </div>
   </div>
   </div>
   </div>
@@ -126,6 +133,11 @@ await this.$swal({
 }
 </script>
 
-<style>
+<style scoped>
+
+img{
+  width: 100%;
+  height: 200px;
+}
 
 </style>

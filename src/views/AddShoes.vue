@@ -95,7 +95,7 @@ export default {
           category: category.value, 
           gender: gender.value
          })
-         router.push('/')
+         router.push('/admin')
          console.log(addDocument)
          }
          catch(err){
