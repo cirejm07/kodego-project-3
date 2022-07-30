@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-2">
         <div id="list-example" class="list-group d-flex flex-row"><br><br>
-          <!-- <a class="list-group-item list-group-item-action" href="#brand-1"><img src="@/assets/brand-hero-logo.png" style="width: 45px; height: 25px;" alt=""></a> -->
+          <a class="list-group-item list-group-item-action" href="#brand-1"><img src="@/assets/brand-hero-logo.png" style="width: 45px; height: 25px;" alt=""></a>
           <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a>
           <a class="list-group-item list-group-item-action" href="#brand-3">Running</a>
           <a class="list-group-item list-group-item-action" href="#brand-4">Walking</a>
@@ -12,6 +12,7 @@
       </div>
       <div class="col-10 mt-5">
         <div data-bs-spy="scroll">
+          <h6 id="brand-1"></h6>
           
         </div>
       </div>
@@ -19,7 +20,7 @@
 <div class="container my-2">
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="8000">
+      <div class="carousel-item active" data-bs-interval="2000">
         <img src="https://www.breakthroughbasketball.com/store/images/hoops/landing_header.jpg" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item" data-bs-interval="2000" >
@@ -44,7 +45,7 @@
       <div class="col-2 mt-5">
         <div id="list-example" class="list-group">
           <a class="list-group-item list-group-item-action" href="#brand-1"><img src="@/assets/brand-hero-logo.png" style="width: 45px; height: 25px;" alt=""></a>
-          <!-- <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a> -->
+          <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a>
           <a class="list-group-item list-group-item-action" href="#brand-3">Running</a>
           <a class="list-group-item list-group-item-action" href="#brand-4">Walking</a>
           <a class="list-group-item list-group-item-action" href="#brand-5">Training/Gym</a>
@@ -93,7 +94,7 @@
         <div id="list-example" class="list-group">
           <a class="list-group-item list-group-item-action" href="#brand-1"><img src="@/assets/brand-hero-logo.png" style="width: 45px; height: 25px;" alt=""></a>
           <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a>
-          <!-- <a class="list-group-item list-group-item-action" href="#brand-3">Running</a> -->
+          <a class="list-group-item list-group-item-action" href="#brand-3">Running</a>
           <a class="list-group-item list-group-item-action" href="#brand-4">Walking</a>
           <a class="list-group-item list-group-item-action" href="#brand-5">Training/Gym</a>
         </div>
@@ -142,7 +143,7 @@
           <a class="list-group-item list-group-item-action" href="#brand-1"><img src="@/assets/brand-hero-logo.png" style="width: 45px; height: 25px;" alt=""></a>
           <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a>
           <a class="list-group-item list-group-item-action" href="#brand-3">Running</a>
-          <!-- <a class="list-group-item list-group-item-action" href="#brand-4">Walking</a> -->
+          <a class="list-group-item list-group-item-action" href="#brand-4">Walking</a>
           <a class="list-group-item list-group-item-action" href="#brand-5">Training/Gym</a>
         </div>
       </div>
@@ -191,7 +192,7 @@
           <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a>
           <a class="list-group-item list-group-item-action" href="#brand-3">Running</a>
           <a class="list-group-item list-group-item-action" href="#brand-4">Walking</a>
-          <!-- <a class="list-group-item list-group-item-action" href="#brand-5">Training/Gym</a> -->
+          <a class="list-group-item list-group-item-action" href="#brand-5">Training/Gym</a>
         </div>
       </div>
       
@@ -268,6 +269,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.carousel-item img{
+  width: 100% !important;
+  height: 700px !important;
+}
 </style>
