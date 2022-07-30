@@ -56,30 +56,13 @@
           <h6 id="brand-2">Basketball</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorum reprehenderit porro excepturi distinctio atque nesciunt nulla nisi exercitationem alias rerum nobis recusandae provident incidunt, ex eligendi fuga debitis voluptates!</p>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
+              <div class="col" v-for="shoe in basketShoes" :key="shoe.id">
                 <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/11cd6eeb-0966-48b0-8c18-2c0567453603/air-max-2021-se-shoes-ncvjbx.png" class="card-img-top" alt="...">
+                  <img :src="shoe.imageUrl" class="card-img-top" alt="...">
                     <div class="card-footer">
-                      <h5 class="card-title">Men's Basketball</h5>
-                      <p class="card-text">Php 2500</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/35c49d34-c876-4d16-b4c7-6fd06a48063b/kyrie-infinity-ep-basketball-shoe-8H6qCV.png" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Women's Basketball</h5>
-                      <p class="card-text">Php 2300</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/f4e40d1c-1e7a-48cc-acce-fab5b858c93b/air-jordan-1-zoom-cmft-shoes-mDxHSk.png" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Unisex Basketball</h5>
-                      <p class="card-text">Php 3000</p>
+                      <h5 class="card-title">{{ shoe.name }}</h5>
+                      <p class="card-text">{{ shoe.gender }}</p>
+                      <p class="card-text">{{ shoe.category }}</p>
                     </div>
                 </div>
               </div>
@@ -104,30 +87,13 @@
           <h6 id="brand-3">Running</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorum reprehenderit porro excepturi distinctio atque nesciunt nulla nisi exercitationem alias rerum nobis recusandae provident incidunt, ex eligendi fuga debitis voluptates!</p>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
+              <div class="col" v-for="shoe in runningShoes" :key="shoe.id">
                 <div class="card h-100">
-                  <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/aba89c3e5a944cc7b87cac2c01750ca6_9366/Pro_Boost_Low_Shoes_White_FX9234_01_standard.jpg" class="card-img-top" alt="...">
+                  <img :src="shoe.imageUrl" class="card-img-top" alt="...">
                     <div class="card-footer">
-                      <h5 class="card-title">Men's Running</h5>
-                      <p class="card-text">Php 2500</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/97e0c555172145c59cadabbc00037455_9366/Pro_Boost_Low_Shoes_White_FX9239_01_standard.jpg" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Women's Running</h5>
-                      <p class="card-text">Php 2300</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/74cfa45de7b748c88168ac2c015f7161_9366/Pro_Boost_Low_Shoes_White_FX9242_01_standard.jpg" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Unisex Running</h5>
-                      <p class="card-text">Php 3000</p>
+                      <h5 class="card-title">{{ shoe.name }}</h5>
+                      <p class="card-text">{{ shoe.gender }}</p>
+                      <p class="card-text">{{ shoe.category }}</p>
                     </div>
                 </div>
               </div>
@@ -152,30 +118,13 @@
           <h6 id="brand-4">Walking</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorum reprehenderit porro excepturi distinctio atque nesciunt nulla nisi exercitationem alias rerum nobis recusandae provident incidunt, ex eligendi fuga debitis voluptates!</p>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
+              <div class="col" v-for="shoe in walkingShoes" :key="shoe.id">
                 <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/35c49d34-c876-4d16-b4c7-6fd06a48063b/kyrie-infinity-ep-basketball-shoe-8H6qCV.png" class="card-img-top" alt="...">
+                  <img :src="shoe.imageUrl" class="card-img-top" alt="...">
                     <div class="card-footer">
-                      <h5 class="card-title">Men's Walking</h5>
-                      <p class="card-text">Php 2500</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/f4e40d1c-1e7a-48cc-acce-fab5b858c93b/air-jordan-1-zoom-cmft-shoes-mDxHSk.png" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Women's Walking</h5>
-                      <p class="card-text">Php 2300</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/11cd6eeb-0966-48b0-8c18-2c0567453603/air-max-2021-se-shoes-ncvjbx.png" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Unisex Walking</h5>
-                      <p class="card-text">Php 3000</p>
+                      <h5 class="card-title">{{ shoe.name }}</h5>
+                      <p class="card-text">{{ shoe.gender }}</p>
+                      <p class="card-text">{{ shoe.category }}</p>
                     </div>
                 </div>
               </div>
@@ -200,30 +149,13 @@
           <h6 id="brand-5">Training/Gym</h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorum reprehenderit porro excepturi distinctio atque nesciunt nulla nisi exercitationem alias rerum nobis recusandae provident incidunt, ex eligendi fuga debitis voluptates!</p>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
+              <div class="col" v-for="shoe in trainingGymShoe" :key="shoe.id">
                 <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/35c49d34-c876-4d16-b4c7-6fd06a48063b/kyrie-infinity-ep-basketball-shoe-8H6qCV.png" class="card-img-top" alt="...">
+                  <img :src="shoe.imageUrl" class="card-img-top" alt="...">
                     <div class="card-footer">
-                      <h5 class="card-title">Men's Training/Gym</h5>
-                      <p class="card-text">Php 2500</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/f4e40d1c-1e7a-48cc-acce-fab5b858c93b/air-jordan-1-zoom-cmft-shoes-mDxHSk.png" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Women's Training/Gym</h5>
-                      <p class="card-text">Php 2300</p>
-                    </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card h-100">
-                  <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/11cd6eeb-0966-48b0-8c18-2c0567453603/air-max-2021-se-shoes-ncvjbx.png" class="card-img-top" alt="...">
-                    <div class="card-footer">
-                      <h5 class="card-title">Unisex Training/Gym</h5>
-                      <p class="card-text">Php 3000</p>
+                      <h5 class="card-title">{{ shoe.name }}</h5>
+                      <p class="card-text">{{ shoe.gender }}</p>
+                      <p class="card-text">{{ shoe.category }}</p>
                     </div>
                 </div>
               </div>
@@ -263,11 +195,63 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
+import { onBeforeMount, onMounted } from '@vue/runtime-core'
+import { auth, shoesCollectionRef } from '@/firebase'
+import { onSnapshot } from '@firebase/firestore'
+
+
+
 export default {
-    name: 'MenView'
+    name: 'MenView',
+     setup() {
+      const name = ref('')
+      const basketShoes = ref([])
+      const runningShoes = ref([])
+      const walkingShoes = ref([])
+      const trainingGymShoe = ref([])
+
+    onBeforeMount(() => {
+        let user = auth.currentUser;
+      if(user) {
+       name.value = user.email.split('@')[0]
+      }
+    })
+
+    onMounted(() => {
+       onSnapshot(shoesCollectionRef, (querySnapshot) => {
+  const getShoes = [];
+  querySnapshot.forEach((doc) => {
+    const shoe = {
+      id: doc.id,
+      category: doc.data().category,
+      description: doc.data().description,
+      gender: doc.data().gender,
+      imageUrl: doc.data().imageUrl,
+      name: doc.data().name,
+      price: doc.data().price,
+      size: doc.data().size
+    }
+      getShoes.push(shoe)
+  })
+    basketShoes.value = getShoes.filter((getShoe) => getShoe.gender === 'Male' && getShoe.category === 'Basketball')
+    runningShoes.value = getShoes.filter((getShoe) => getShoe.gender === 'Male' && getShoe.category === 'Running')
+    walkingShoes.value = getShoes.filter((getShoe) => getShoe.gender === 'Male' && getShoe.category === 'Walking')
+    trainingGymShoe.value = getShoes.filter((getShoe) => getShoe.gender === 'Male' && getShoe.category === 'Training & Gym')
+    })
+    })
+    
+    
+    
+
+    return { name, basketShoes, runningShoes, walkingShoes, trainingGymShoe }
+    }
 }
 </script>
 
-<style>
-
+<style scoped>
+  img {
+    width: 100%;
+    height: 250px;
+  }
 </style>
