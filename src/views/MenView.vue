@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-  <div class="row">
-  <div class="col-2">
-        <div id="list-example" class="list-group"><br><br>
+    <div class="row">
+      <div class="col-2">
+        <div id="list-example" class="list-group d-flex flex-row"><br><br>
           <!-- <a class="list-group-item list-group-item-action" href="#brand-1"><img src="@/assets/brand-hero-logo.png" style="width: 45px; height: 25px;" alt=""></a> -->
           <a class="list-group-item list-group-item-action" href="#brand-2">Basketball</a>
           <a class="list-group-item list-group-item-action" href="#brand-3">Running</a>
@@ -12,24 +12,33 @@
       </div>
       <div class="col-10 mt-5">
         <div data-bs-spy="scroll">
-          <h4 id="brand-1">Tagline</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorum reprehenderit porro excepturi distinctio atque nesciunt nulla nisi exercitationem alias rerum nobis recusandae provident incidunt, ex eligendi fuga debitis voluptates!</p>
+          
         </div>
       </div>
     </div>
-<div class="container my-2 card bg-dark text-white">
-    
-    <!-- <h1>Welcome {{name}} </h1> -->
-    <!-- <div class="row"> -->
-      <!-- <div class="col-md-7"> -->
-        <img src="https://img.wallpapersafari.com/desktop/1024/576/81/23/B7PkLT.jpg" alt="" />
-      <!-- </div> -->
-      <div class="card-img-overlay">
-        <h4 class="font-weight-light">Our Latest Featured Brands</h4>
-        <p class="mt-1">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae iure dicta soluta suscipit quisquam maiores sunt officiis ad, delectus ut sint quam consectetur illum optio architecto tempora facere explicabo quod.</p>
+<div class="container my-2">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="8000">
+        <img src="https://www.breakthroughbasketball.com/store/images/hoops/landing_header.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000" >
+        <img src="https://www.letsdothis.com/blog/wp-content/uploads/2019/10/male-running.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.arthritis.org/getmedia/64baa9af-fb3d-40e4-b6cf-0305c5a1591c/Health_WalkingStrategy_Thumb.png?width=600&height=325&ext=.png" class="d-block w-100" alt="...">
       </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
   
     <div class="row">
       <div class="col-2 mt-5">
@@ -232,7 +241,7 @@
       </div>
     </div>
 
-<button v-if="name" @click="signOutHandler" class="btn btn-primary col-3 mb-4 justify-content-center">Sign out</button>
+<!-- <button v-if="name" @click="signOutHandler" class="btn btn-primary col-3 mb-4 justify-content-center">Sign out</button> -->
 
   <!-- <div>
     <h1>LuzViMinda</h1>
