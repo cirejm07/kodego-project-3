@@ -1,13 +1,8 @@
 <template>
-  <div>
-    <h1>Admin Page</h1>
-  <div class="d-md-flex gap-md-1">
+  <div class="d-md-flex flex-wrap justify-content-evenly align-items-center mx-auto">
+    
     <div v-for="shoe in shoes" :key="shoe.id" class="home">
-  <div class="card" style="width: 18rem; height: 35rem;">
-  <img :src="shoe.imageUrl" class="card-img-top border border-1" :alt="shoe.imgUrl">
-  <div class="d-flex justify-content-center">
-    <div v-for="shoe in shoes" :key="shoe.id" class="home">
-  <div class="card mx-2" style="width: 18rem; height: auto">
+  <div class="card mx-2" style="width: 18rem; height: 500px">
   <img :src="shoe.imageUrl" class="card-img-top" :alt="shoe.imgUrl">
   <div class="card-body">
     <p>id - {{shoe.id}}</p>
@@ -23,13 +18,9 @@
   </div>
 </div>
     <br>
-    
   </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
+
 </template>
 
 <script>

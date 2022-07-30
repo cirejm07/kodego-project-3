@@ -15,8 +15,6 @@
         <i class="fa-solid fa-user"></i>
         <ul class="dropdown-menu">
         <li><button @click="signoutHandler" class="dropdown-item" >Sign out</button></li>
-        <li><a class="dropdown-item" href="#">Action two</a></li>
-        <li><a class="dropdown-item" href="#">Action three</a></li>
       </ul>
       </button>
     </div>
