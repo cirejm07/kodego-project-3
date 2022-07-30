@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1>Admin Page</h1>
-  <div class="d-flex">
+  <div class="d-flex justify-content-center">
     <div v-for="shoe in shoes" :key="shoe.id" class="home">
-  <div class="card" style="width: 18rem; height: 35rem;">
+  <div class="card mx-2" style="width: 18rem; height: auto">
   <img :src="shoe.imageUrl" class="card-img-top" :alt="shoe.imgUrl">
   <div class="card-body">
     <p>id - {{shoe.id}}</p>
