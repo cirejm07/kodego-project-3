@@ -232,24 +232,6 @@
       </div>
     </div>
 
-<button v-if="name" @click="signOutHandler" class="btn btn-primary col-3 mb-4 justify-content-center">Sign out</button>
-
-  <!-- <div>
-    <h1>LuzViMinda</h1>
-  <div class="d-flex">
-    <div v-for="shoe in shoes" :key="shoe.id" class="home">
-  <div class="card" style="width: 18rem; height: 20rem;">
-  <img :src="shoe.imageUrl" class="card-img-top" :alt="shoe.imgUrl">
-  <div class="card-body">
-    <h5 class="card-title">Name - {{shoe.name}}</h5>
-    <p>Price - {{shoe.price}}</p>
-    <p>Category: {{shoe.category}}</p>
-    <p>Gender - {{shoe.gender}}</p>
-  </div>
-</div>
-  </div>
-  </div>
-  </div> -->
 </template>
 
 <script>

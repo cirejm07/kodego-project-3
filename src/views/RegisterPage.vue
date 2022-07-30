@@ -66,7 +66,7 @@ form{
 }
   
   img{
-    width: 350px;
+    width: 250px;
     height: auto;
   }
 
